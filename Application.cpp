@@ -6,13 +6,13 @@ int Application::run()
     int select = 0;
     do {
         std::cout << "\x1B[2J\x1B[H";
-        std::cout << "\n------ MAIN MENU ------\n"
-            <<(select == 0 ? '>' : ' ') << "modify database\n"
-            <<(select == 1 ? '>' : ' ') << "load/store database\n"
-            <<(select == 2 ? '>' : ' ') << "filter database\n"
-            <<(select == 3 ? '>' : ' ') << "set sorting order\n"
-            <<(select == 4 ? '>' : ' ') << "visualize database\n"
-            <<(select == 5 ? '>' : ' ') << "back/exit\n";
+        std::cout << "\n\t------ MAIN MENU ------\n"
+           << "\t" <<(select == 0 ? '>' : ' ') << " modify database\n"
+           << "\t" <<(select == 1 ? '>' : ' ') << " load/store database\n"
+           << "\t" <<(select == 2 ? '>' : ' ') << " filter database\n"
+           << "\t" <<(select == 3 ? '>' : ' ') << " set sorting order\n"
+           << "\t" <<(select == 4 ? '>' : ' ') << " visualize database\n"
+           << "\t" <<(select == 5 ? '>' : ' ') << " back/exit\n";
 
         input = _getch();
 
@@ -60,11 +60,11 @@ void Application::modifyDataBase()
     int select = 0;
     do {
         std::cout << "\x1B[2J\x1B[H";
-        std::cout << "\n------ MODIFY DATABASE ------\n"
-            << (select == 0 ? '>' : ' ') << "add entry\n"
-            << (select == 1 ? '>' : ' ') << "remove entry\n"
-            << (select == 2 ? '>' : ' ') << "modify entry\n"
-            << (select == 3 ? '>' : ' ') << "<- back\n";
+        std::cout << "\n\t------ MODIFY DATABASE ------\n"
+            << "\t" << (select == 0 ? '>' : ' ') << " add entry\n"
+            << "\t" << (select == 1 ? '>' : ' ') << " remove entry\n"
+            << "\t" << (select == 2 ? '>' : ' ') << " modify entry\n"
+            << "\t" << (select == 3 ? '>' : ' ') << " <- back\n";
 
         input = _getch();
 
@@ -98,7 +98,6 @@ void Application::modifyDataBase()
             case 2:
             {
                 std::string name;
-                int grade;
                 std::cout << "\nModify Student: ";
                 std::cout << "\nEnter name: ";
                 std::cin >> name;
@@ -122,6 +121,16 @@ void Application::modifyDataBase()
 
 void Application::printDataBase()
 {
-
+    std::cout <<
+        "+----------------------+---+\n" <<
+        "|       Name           |   |\n" <<
+        "+----------------------+---+\n";
+    for (auto e : manager.get_entries())
+    {
+        std::cout << "| " << std::setw(20) << std::left << e.name << " | " << std::setw(1) << e.grade << " |\n" <<
+            "+----------------------+---+\n";
+    }
+    std::cout << "\nPress any key to continue...";
+    _getch();
 }
 

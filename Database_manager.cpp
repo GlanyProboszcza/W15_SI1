@@ -41,7 +41,7 @@ void Database_manager::modify_entry(std::string name)
 std::vector<Database_manager::database_entry> Database_manager::get_entries()
 {
 	std::vector<database_entry> temp;
-	std::transform(data.begin(), data.end(), std::back_inserter(temp), [](char c) {return c; });
+	std::transform(data.begin(), data.end(), std::back_inserter(temp), [](std::pair <std::string,int> c) {return database_entry(c.first,c.second); });
 
 	return temp;
 }

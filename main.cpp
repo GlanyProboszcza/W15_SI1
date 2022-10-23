@@ -5,5 +5,6 @@
 
 int main()
 {
-
+	Application apka;
+	return apka.run();
 }
