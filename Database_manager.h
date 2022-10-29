@@ -8,7 +8,32 @@ private:
 	std::unordered_map<std::string, unsigned int> data;
 
 public:
-    Database_manager() = default;
+    Database_manager() {
+        //data = {
+        //{"Agata Porzadek",        4 },
+        //{"Marcin Elblag",        2 },
+        //{"Dominik Stokrotka",    3 },
+        //{"Sylwester Wilusz",    4 },
+        //{"Krystyn Dobies",        2 },
+        //{"Ferdynand Zebro",        6 },
+        //{"Dominik Pacha",        1 },
+        //{"Witold Nowak",        4 },
+        //{"Chrystian Porada",    2 },
+        //{"Sebastian Dombrowski",5 },
+        //{"Albert Komarek",        3 },
+        //{"Igor Soboleski",        6 },
+        //{"Korneli Lysek",        3 },
+        //{"Hubert Kopecki",        1 },
+        //{"Bartlomiej Gal",        2 },
+        //{"Ludomil Kaniuk",        4 },
+        //{"Radoslaw Wegrzyn",    6 },
+        //{"Jakub Gazdik",        5 },
+        //{"Justyn Strozewski",    3 },
+        //{"Lubomir Merta",        2 },
+        //{"Wladyslaw Gogol",        1 }
+        //};
+
+    }
     ~Database_manager() = default;
 
     struct database_entry 

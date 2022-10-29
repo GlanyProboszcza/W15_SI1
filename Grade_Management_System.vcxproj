@@ -130,13 +130,11 @@
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Database_manager.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ui_db_context.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Database_manager.h" />
     <ClInclude Include="Library.h" />
-    <ClInclude Include="ui_db_context.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
